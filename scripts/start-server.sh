@@ -34,7 +34,7 @@ else
 fi
 
 echo "---Version Check TModLoader---"
-if [ ! -d "${SERVER_DIR}/tModLoaderServer" ]; then
+if [ ! -f "${SERVER_DIR}/tModLoaderServer" ]; then
     echo "---TModLoader not found, downloading!---"
     cd ${SERVER_DIR}
     wget -q - https://github.com/tModLoader/tModLoader/releases/download/v$MOD_VER/tModLoader.Linux.v$MOD_VER.tar.gz
@@ -62,7 +62,7 @@ echo "---Prepare Server---"
 if [ ! -f "${SERVER_DIR}/serverconfig.txt" ]; then
   echo "---No serverconfig.txt found, downloading...---"
   cd ${SERVER_DIR}
-  wget -qi serverconfig.txt "https://raw.githubusercontent.com/ich777/docker-terraria-server/master/config/serverconfig.txt"
+  wget -qi serverconfig.txt "https://raw.githubusercontent.com/georgesoteriou/docker-terraria-server/master/config/serverconfig.txt"
 fi
 echo "---Server ready---"
 chmod -R 777 ${DATA_DIR}
