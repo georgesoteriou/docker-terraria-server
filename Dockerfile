@@ -1,6 +1,6 @@
 FROM ubuntu
 
-MAINTAINER ich777
+MAINTAINER georgesoteriou
 
 RUN apt-get update
 RUN apt-get -y install wget screen unzip curl
@@ -10,6 +10,7 @@ ENV SERVER_DIR="${DATA_DIR}/serverfiles"
 ENV GAME_VERSION="template"
 ENV GAME_MOD="template"
 ENV GAME_PARAMS="template"
+ENV MODLOADER_VER="template"
 ENV UMASK=000
 ENV UID=99
 ENV GID=100
